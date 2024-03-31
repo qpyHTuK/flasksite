@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/shop.css') }}">
+    <title>Shop</title>
+</head>
+<body>
+    <h1>Товары</h1>
+    <div class="full-product">
+        {%for product in products%}
+        <div class="product">
+            <img src="{{ url_for('static', filename=product['image']) }}">
+            <h3>{{product['name']}}</h3>
+            <p>Цена: {{product['price']}}</p>
+            <a href="#" class="buy-btn">Купить</a>
+        </div>
+        {%endfor%}
+    </div>
+
+
+    <div class="footer">
+        <div class="footer-button">
+            <a href="/menu">
+                <img src="{{ url_for('static', filename='images/home.png') }}" alt="Home">
+            </a>
+        </div>
+
+        <div class="footer-button">
+            <a href="/menu/cart">
+                <img src="{{ url_for('static', filename='images/cart.png') }}" alt="Home">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
