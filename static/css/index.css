@@ -1,0 +1,53 @@
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+body {
+    background-color: #191818;
+}
+
+.btn {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-top: 140px;
+    margin-left: -54.5px;
+    width: 130px;
+    height: 30px;
+}
+
+.h1 {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-top: 137px;
+    margin-left: -35px;
+
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -40px;
+    margin-left: -65px;
+    animation: spin 2.5s linear infinite;
+    display: none;
+}
+
+.header__images {
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -6px;
+    margin-left: -52px;
+}
+
